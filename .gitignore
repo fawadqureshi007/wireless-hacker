@@ -1,0 +1,29 @@
+# Output files
+output/
+*.cap
+*.csv
+*.ivs
+*.pcapng
+*.hccapx
+*.22000
+
+# Database
+*.db
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Credentials
+credentials.txt
+*.cred
