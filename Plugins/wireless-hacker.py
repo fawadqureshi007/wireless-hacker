@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-wireless-hacker - Professional WiFi Penetration Testing Framework
+Wireless-hacker - Professional WiFi Penetration Testing Framework
 Main Entry Point
 Usage: sudo python3 wireless-hacker.py [options]
 """
