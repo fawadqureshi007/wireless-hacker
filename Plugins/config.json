@@ -1,0 +1,20 @@
+{
+    "interface": "wlan0",
+    "monitor_interface": "wlan0mon",
+    "output_dir": "./output",
+    "log_level": "INFO",
+    "wordlist": "/usr/share/wordlists/rockyou.txt",
+    "timeout": 60,
+    "channel_hop_interval": 0.3,
+    "deauth_count": 15,
+    "wps_pixie_timeout": 120,
+    "database_file": "sudoit_sessions.db",
+    "web_port": 8080,
+    "web_host": "127.0.0.1",
+    "plugin_dir": "./plugins",
+    "mac_randomization": false,
+    "karma_enabled": false,
+    "beacon_flood_threshold": 50,
+    "session_auto_save": true,
+    "cleanup_exit": true
+}
