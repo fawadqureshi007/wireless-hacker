@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Wireless-hacker - Professional WiFi Penetration Testing Framework
+SUDOIT - Professional WiFi Penetration Testing Framework
 Main Entry Point
-Usage: sudo python3 wireless-hacker.py [options]
+Usage: sudo python3 sudoit.py [options]
 """
 
 import sys
@@ -13,7 +13,7 @@ import textwrap
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from core.engine import wireless-hacker
+from core.engine import SUDOIT
 from core.config import ConfigManager
 
 __version__ = "1.0.0"
@@ -32,9 +32,12 @@ BANNER = r"""
         ║                   Developer: h4cker_fawad
         ╚══════════════════════════════════════════════════════════╝
 """
+    finally:
+        fw.cleanup_exit()
+
 
 HELP_TEXT = """
-wireless-hacker - WiFi Penetration Testing Framework
+SUDOIT - WiFi Penetration Testing Framework
 
 MODULES:
   scan        Scan for WiFi networks
@@ -53,20 +56,20 @@ MODULES:
   status      Show framework status
 
 EXAMPLES:
-  sudo python3 wireless-hacker.py scan -d 60
-  sudo python3 wireless-hacker.py handshake -b AA:BB:CC:DD:EE:FF -c 6
-  sudo python3 wireless-hacker.py pmkid -b AA:BB:CC:DD:EE:FF
-  sudo python3 wireless-hacker.py pixie -b AA:BB:CC:DD:EE:FF -c 6
-  sudo python3 wireless-hacker.py eviltwin -s "MyWiFi"
-  sudo python3 wireless-hacker.py crack -f capture.cap -w wordlist.txt
-  sudo python3 wireless-hacker.py report -f html
-  sudo python3 wireless-hacker.py dashboard
+  sudo python3 sudoit.py scan -d 60
+  sudo python3 sudoit.py handshake -b AA:BB:CC:DD:EE:FF -c 6
+  sudo python3 sudoit.py pmkid -b AA:BB:CC:DD:EE:FF
+  sudo python3 sudoit.py pixie -b AA:BB:CC:DD:EE:FF -c 6
+  sudo python3 sudoit.py eviltwin -s "MyWiFi"
+  sudo python3 sudoit.py crack -f capture.cap -w wordlist.txt
+  sudo python3 sudoit.py report -f html
+  sudo python3 sudoit.py dashboard
 """
 
 def create_parser():
     """Create argument parser."""
     parser = argparse.ArgumentParser(
-     description="wireless-hacker - Professional WiFi Penetration Testing Framework"
+        description="SUDOIT - Professional WiFi Penetration Testing Framework",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=HELP_TEXT
     )
@@ -75,7 +78,7 @@ def create_parser():
                        help="Wireless interface (default: wlan0)")
     parser.add_argument("-c", "--config", help="JSON config file")
     parser.add_argument("-v", "--version", action="version",
-                       version=f"wireless-hacker v{__version__}"
+                       version=f"SUDOIT v{__version__}")
     
     subparsers = parser.add_subparsers(dest="module", help="Module to run")
     
@@ -189,7 +192,7 @@ def main():
     config["interface"] = args.interface
     
     # Initialize framework
-    fw = WirelessHacker(config)
+    fw = SUDOIT(config)
     fw.check_root()
     fw.check_dependencies()
     fw.start_monitor_mode()
@@ -307,6 +310,10 @@ def main():
         print(f"\n[!] Interrupted by user")
     finally:
         fw.cleanup_exit()
+
+
+if __name__ == "__main__":
+    main()
 
 
 if __name__ == "__main__":
