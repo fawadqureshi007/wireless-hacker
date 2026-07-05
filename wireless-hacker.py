@@ -28,9 +28,9 @@ BANNER = r"""
         ╔══════════════════════════════════════════════════════════╗
         ║           wireless-hacker v""" + __version__ + """       ║
         ║      Ethical Use Only | Authorized Testing Only          ║
-        ║      Kali Linux | Python 3.8+ | Professional Grade 
-        ║                   Developer: h4cker_fawad
-        ╚══════════════════════════════════════════════════════════╝
+        ║      Kali Linux | Python 3.8+ | Professional Grade       ║
+        ║             Developer: h4cker_fawad                      ║
+        ══════════════════════════════════════════════════════════
 """
 
 HELP_TEXT = """
