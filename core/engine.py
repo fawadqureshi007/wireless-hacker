@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Wireless-Hacker - Core Framework
+Wireless-Hacker Engine - Core Framework
 Professional WiFi Penetration Testing Framework
 Version: 1.0.0 | Ethical Use Only
 """
@@ -132,7 +132,7 @@ class SUDOIT:
         self.logger.info("SUDOIT Framework initialized successfully")
     
     def _display_banner(self):
-     """Display wireless-hacker ASCII art banner."""
+"""Display wireless-hacker ASCII art banner."""
 
 banner = f"""
 {bcolors.BOLD}{bcolors.CYAN}
@@ -153,26 +153,21 @@ banner = f"""
 
 {bcolors.ENDC}
 {bcolors.BOLD}
-{bcolors.BOLD}
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                    ⚡ wireless-hacker v{__version__} ⚡                      ║
+║               Professional Wireless Security Assessment Framework           ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
-║  📡 Professional Wireless Security Assessment Framework                      ║
-║                                                                              ║
-║  👨‍💻 Developer  : Fawad Qureshi                                               ║
-║  📷 Instagram : @h4cker_fawad                                                ║
-║  🐧 Platform   : Kali Linux | Python 3.8+                                    ║
-║  🛡 Purpose    : Authorized Wireless Security Testing                        ║
-║                                                                              ║
-║  "Knowledge is power. Responsibility is greater."                            ║
+║  👨‍💻 Developer : h4cker_fawad                                               ║
+║  🏷 Version   : v{__version__:<56}║
+║  🐧 Platform  : Kali Linux • Python 3.8+                                   ║
+║  📡 Modules   : Scan • Handshake • PMKID • WPS • Reports • Dashboard       ║
+║  ⚖ Purpose   : Authorized Wireless Security Testing Only                   ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-{bcolors.ENDC}
 
 {bcolors.OKGREEN}[+] Ready to assess wireless networks...{bcolors.ENDC}
 
 """
-
-print(banner)
+        print(banner)
+    
     # ==================== SIGNAL HANDLER ====================
     def _signal_handler(self, sig, frame):
         """Handle Ctrl+C for graceful shutdown."""
