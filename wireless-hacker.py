@@ -19,22 +19,34 @@ from core.config import ConfigManager
 __version__ = "1.0.0"
 
 BANNER = r"""
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                    ⚡ wireless-hacker v{__version__} ⚡                      ║
+
+██╗    ██╗██╗██████╗ ███████╗██╗     ███████╗███████╗███████╗
+██║    ██║██║██╔══██╗██╔════╝██║     ██╔════╝██╔════╝██╔════╝
+██║ █╗ ██║██║██████╔╝█████╗  ██║     █████╗  ███████╗███████╗
+██║███╗██║██║██╔══██╗██╔══╝  ██║     ██╔══╝  ╚════██║╚════██║
+╚███╔███╔╝██║██║  ██║███████╗███████╗███████╗███████║███████║
+ ╚══╝╚══╝ ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝
+
+██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗██████╗
+██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+███████║███████║██║     █████╔╝ █████╗  ██████╔╝
+██╔══██║██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
+██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██║  ██║
+╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+                                                                       
+    ╔══════════════════════════════════════════════════════════════════════════════╗
+║               Professional Wireless Security Assessment Framework           ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
-║  📡 Professional Wireless Security Assessment Framework                    ║
-║                                                                            ║
-║  👨‍💻 Developer  : Fawad Qureshi                                              ║
-║  📷 Instagram : @h4cker_fawad                                              ║
-║  🐧 Platform   : Kali Linux | Python 3.8+                                  ║
-║  🛡 Purpose    : Authorized Wireless Security Testing                      ║
-║                                                                            ║
-║  "Knowledge is power. Responsibility is greater."                          ║
+║  👨‍💻 Developer : h4cker_fawad                                               ║
+║  🏷 Version   : v{__version__:<56}║
+║  🐧 Platform  : Kali Linux • Python 3.8+                                   ║
+║  📡 Modules   : Scan • Handshake • PMKID • WPS • Reports • Dashboard       ║
+║  ⚖ Purpose   : Authorized Wireless Security Testing Only                   ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 """
 
 HELP_TEXT = """
-SUDOIT - WiFi Penetration Testing Framework
+wireless-hacker - WiFi Penetration Testing Framework
 
 MODULES:
   scan        Scan for WiFi networks
