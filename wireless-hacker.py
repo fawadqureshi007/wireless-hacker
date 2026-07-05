@@ -37,28 +37,27 @@ from core.config import ConfigManager
 
 __version__ = "1.0.0"
 
-BANNER = r"""
- ██╗    ██╗██╗██████╗ ███████╗██╗     ███████╗███████╗███████╗
+BANNER = f"""
+██╗    ██╗██╗██████╗ ███████╗██╗     ███████╗███████╗███████╗
 ██║    ██║██║██╔══██╗██╔════╝██║     ██╔════╝██╔════╝██╔════╝
 ██║ █╗ ██║██║██████╔╝█████╗  ██║     █████╗  ███████╗███████╗
 ██║███╗██║██║██╔══██╗██╔══╝  ██║     ██╔══╝  ╚════██║╚════██║
-╚███╔███╔╝██║██║  ██║███████╗███████╗███████╗███████║███████║
- ╚══╝╚══╝ ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝
+╚███╔███╔╝██║██║  ██║███████╗███████╗███████║███████║███████║
+╚══╝╚══╝ ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝
 
-██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗██████╗
-██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
-███████║███████║██║     █████╔╝ █████╗  ██████╔╝
-██╔══██║██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
-██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██║  ██║
-╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
- 
-                                                                       
-    ╔══════════════════════════════════════════════════════════╗
-    ║           wireless-hacker v""" + __version__ + """       ║
-    ║      Ethical Use Only | Authorized Testing Only          ║
-    ║      Kali Linux | Python 3.8+ | Professional Grade       ║
-    ║             Developer: h4cker_fawad                      ║
-    ╚══════════════════════════════════════════════════════════╝
+██████╗  █████╗ ███╗   ██╗██████╗ ███████╗███████╗███████╗
+██╔══██╗██╔══██╗████╗  ██║██╔══██╗██╔════╝██╔════╝██╔════╝
+██████╔╝███████║██╔██╗ ██║██████╔╝█████╗  ███████╗███████╗
+██╔══██╗██╔══██║██║╚██╗██║██╔══██╗██╔══╝  ╚════██║╚════██║
+██████╔╝██║  ██║██║ ╚████║██████╔╝███████╗███████║███████║
+╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚══════╝╚══════╝
+
+╔══════════════════════════════════════════════════════════╗
+║           wireless-hacker v{__version__}                ║
+║      Ethical Use Only | Authorized Testing Only          ║
+║      Kali Linux | Python 3.8+ | Professional Grade       ║
+║             Developer: h4cker_fawad                      ║
+╚══════════════════════════════════════════════════════════╝
 """
 
 HELP_TEXT = """
@@ -81,14 +80,14 @@ MODULES:
   status      Show framework status
 
 EXAMPLES:
-  sudo python3 sudoit.py scan -d 60
-  sudo python3 sudoit.py handshake -b AA:BB:CC:DD:EE:FF -c 6
-  sudo python3 sudoit.py pmkid -b AA:BB:CC:DD:EE:FF
-  sudo python3 sudoit.py pixie -b AA:BB:CC:DD:EE:FF -c 6
-  sudo python3 sudoit.py eviltwin -s "MyWiFi"
-  sudo python3 sudoit.py crack -f capture.cap -w wordlist.txt
-  sudo python3 sudoit.py report -f html
-  sudo python3 sudoit.py dashboard
+  sudo python3 wireless-hacker.py scan -d 60
+  sudo python3 wireless-hacker.py handshake -b AA:BB:CC:DD:EE:FF -c 6
+  sudo python3 wireless-hacker.py pmkid -b AA:BB:CC:DD:EE:FF
+  sudo python3 wireless-hacker.py pixie -b AA:BB:CC:DD:EE:FF -c 6
+  sudo python3 wireless-hacker.py eviltwin -s "MyWiFi"
+  sudo python3 wireless-hacker.py crack -f capture.cap -w wordlist.txt
+  sudo python3 wireless-hacker.py report -f html
+  sudo python3 wireless-hacker.py dashboard
 """
 
 def create_parser():
