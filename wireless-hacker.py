@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-SUDOIT - Professional WiFi Penetration Testing Framework
+Wireless-Hacker - Professional WiFi Penetration Testing Framework
 Main Entry Point
-Usage: sudo python3 sudoit.py [options]
+Usage: sudo python3 wireless-hacker.py [options]
 """
 
 import sys
@@ -19,22 +19,44 @@ from core.config import ConfigManager
 __version__ = "1.0.0"
 
 BANNER = r"""
- __        ___          _                     _                     _             
- \ \      / (_)_ __ ___| | ___  ___ ___      | |__   __ _  ___ ___| | _____ _ __ 
-  \ \ /\ / /| | '__/ _ \ |/ _ \/ __/ __|_____| '_ \ / _` |/ __/ __| |/ / _ \ '__|
-   \ V  V / | | | |  __/ |  __/\__ \__ \_____| | | | (_| | (__\__ \   <  __/ |   
-    \_/\_/  |_|_|  \___|_|\___||___/___/     |_| |_|\__,_|\___|___/_|\_\___|_|   
+ """Display wireless-hacker ASCII art banner."""
 
-        ╔══════════════════════════════════════════════════════════╗
-        ║           wireless-hacker v""" + __version__ + """       ║
-        ║      Ethical Use Only | Authorized Testing Only          ║
-        ║      Kali Linux | Python 3.8+ | Professional Grade       ║
-        ║             Developer: h4cker_fawad                      ║
-        ══════════════════════════════════════════════════════════
+banner = f"""
+{bcolors.BOLD}{bcolors.CYAN}
+
+██╗    ██╗██╗██████╗ ███████╗██╗     ███████╗███████╗███████╗
+██║    ██║██║██╔══██╗██╔════╝██║     ██╔════╝██╔════╝██╔════╝
+██║ █╗ ██║██║██████╔╝█████╗  ██║     █████╗  ███████╗███████╗
+██║███╗██║██║██╔══██╗██╔══╝  ██║     ██╔══╝  ╚════██║╚════██║
+╚███╔███╔╝██║██║  ██║███████╗███████╗███████╗███████║███████║
+ ╚══╝╚══╝ ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝
+
+██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗██████╗
+██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+███████║███████║██║     █████╔╝ █████╗  ██████╔╝
+██╔══██║██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
+██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██║  ██║
+╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+
+{bcolors.ENDC}
+{bcolors.BOLD}
+╔══════════════════════════════════════════════════════════════════════════════╗
+║               Professional Wireless Security Assessment Framework            ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  👨‍💻 Developer : h4cker_fawad                                                 ║
+║  🏷 Version   : v{__version__:<56}                                           ║
+║  🐧 Platform  : Kali Linux • Python 3.8+                                     ║
+║  📡 Modules   : Scan • Handshake • PMKID • WPS • Reports • Dashboard         ║
+║  ⚖ Purpose   : Authorized Wireless Security Testing Only                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+{bcolors.OKGREEN}[+] Ready to assess wireless networks...{bcolors.ENDC}
+
 """
 
+print(banner)
 HELP_TEXT = """
-SUDOIT - WiFi Penetration Testing Framework
+Wireless-Hacker - WiFi Penetration Testing Framework
 
 MODULES:
   scan        Scan for WiFi networks
@@ -53,14 +75,14 @@ MODULES:
   status      Show framework status
 
 EXAMPLES:
-  sudo python3 sudoit.py scan -d 60
-  sudo python3 sudoit.py handshake -b AA:BB:CC:DD:EE:FF -c 6
-  sudo python3 sudoit.py pmkid -b AA:BB:CC:DD:EE:FF
-  sudo python3 sudoit.py pixie -b AA:BB:CC:DD:EE:FF -c 6
-  sudo python3 sudoit.py eviltwin -s "MyWiFi"
-  sudo python3 sudoit.py crack -f capture.cap -w wordlist.txt
-  sudo python3 sudoit.py report -f html
-  sudo python3 sudoit.py dashboard
+  sudo python3 wireless-hacker.py.py scan -d 60
+  sudo python3 wireless-hacker.py handshake -b AA:BB:CC:DD:EE:FF -c 6
+  sudo python3 wireless-hacker.py pmkid -b AA:BB:CC:DD:EE:FF
+  sudo python3 wireless-hacker.py pixie -b AA:BB:CC:DD:EE:FF -c 6
+  sudo python3 wireless-hacker.py eviltwin -s "MyWiFi"
+  sudo python3 wireless-hacker.py crack -f capture.cap -w wordlist.txt
+  sudo python3 wireless-hacker.py report -f html
+  sudo python3 wireless-hacker.py dashboard
 """
 
 def create_parser():
@@ -307,10 +329,6 @@ def main():
         print(f"\n[!] Interrupted by user")
     finally:
         fw.cleanup_exit()
-
-
-if __name__ == "__main__":
-    main()
 
 
 if __name__ == "__main__":
