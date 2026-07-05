@@ -32,9 +32,6 @@ BANNER = r"""
         ║                   Developer: h4cker_fawad
         ╚══════════════════════════════════════════════════════════╝
 """
-    finally:
-        fw.cleanup_exit()
-
 
 HELP_TEXT = """
 SUDOIT - WiFi Penetration Testing Framework
