@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SUDOIT Engine - Core Framework
+Wireless-Hacker - Core Framework
 Professional WiFi Penetration Testing Framework
 Version: 1.0.0 | Ethical Use Only
 """
@@ -56,7 +56,7 @@ class bcolors:
 
 class SUDOIT:
     """
-    SUDOIT - Professional WiFi Penetration Testing Framework
+    Wireless-Hacker - Professional WiFi Penetration Testing Framework
     
     Features:
         - Advanced WiFi scanning with OUI fingerprinting
@@ -132,25 +132,47 @@ class SUDOIT:
         self.logger.info("SUDOIT Framework initialized successfully")
     
     def _display_banner(self):
-        """Display SUDOIT ASCII art banner."""
-        banner = f"""
+     """Display wireless-hacker ASCII art banner."""
+
+banner = f"""
 {bcolors.BOLD}{bcolors.CYAN}
-  __                 __    _  _   _____ _   _______ _____ _____ _____ 
- / _|                \ \ _| || |_/  ___| | | |  _  \  _  |_   _|_   _|
-| |_ _   ___  ____   _\ \_  __  _\ `--.| | | | | | | | | | | |   | |  
-|  _| | | \ \/ /\ \ / /> >| || |_ `--. \ | | | | | | | | | | |   | |  
-| | | |_| |>  <  \ V // /_  __  _/\__/ / |_| | |/ /\ \_/ /_| |_  | |  
-|_|  \__,_/_/\_\  \_//_/  |_||_| \____/ \___/|___/  \___/ \___/  \_/  
-                                                                       
+
+██╗    ██╗██╗██████╗ ███████╗██╗     ███████╗███████╗███████╗
+██║    ██║██║██╔══██╗██╔════╝██║     ██╔════╝██╔════╝██╔════╝
+██║ █╗ ██║██║██████╔╝█████╗  ██║     █████╗  ███████╗███████╗
+██║███╗██║██║██╔══██╗██╔══╝  ██║     ██╔══╝  ╚════██║╚════██║
+╚███╔███╔╝██║██║  ██║███████╗███████╗███████╗███████║███████║
+ ╚══╝╚══╝ ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝
+
+██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗██████╗
+██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+███████║███████║██║     █████╔╝ █████╗  ██████╔╝
+██╔══██║██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
+██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██║  ██║
+╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+
 {bcolors.ENDC}
-{bcolors.BOLD}     ╔══════════════════════════════════════════════════════════╗
-     ║     WiFi Penetration Testing Framework v{__version__}              ║
-     ║     Ethical Use Only | Authorized Testing Only           ║
-     ║     Kali Linux | Python 3.8+ | Professional Grade        ║
-     ╚══════════════════════════════════════════════════════════╝
-{bcolors.ENDC}"""
-        print(banner)
-    
+{bcolors.BOLD}
+{bcolors.BOLD}
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    ⚡ wireless-hacker v{__version__} ⚡                      ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  📡 Professional Wireless Security Assessment Framework                      ║
+║                                                                              ║
+║  👨‍💻 Developer  : Fawad Qureshi                                               ║
+║  📷 Instagram : @h4cker_fawad                                                ║
+║  🐧 Platform   : Kali Linux | Python 3.8+                                    ║
+║  🛡 Purpose    : Authorized Wireless Security Testing                        ║
+║                                                                              ║
+║  "Knowledge is power. Responsibility is greater."                            ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+{bcolors.ENDC}
+
+{bcolors.OKGREEN}[+] Ready to assess wireless networks...{bcolors.ENDC}
+
+"""
+
+print(banner)
     # ==================== SIGNAL HANDLER ====================
     def _signal_handler(self, sig, frame):
         """Handle Ctrl+C for graceful shutdown."""
